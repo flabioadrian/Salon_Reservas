@@ -1,0 +1,117 @@
+/* Estilos específicos para la página de login */
+.login-section {
+    margin-top: 120px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px);
+}
+
+.login-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #f5e6dd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(62, 47, 47, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto; /* Esto asegura el centrado horizontal */
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 2.2rem;
+    color: #5d4037;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #5d4037;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d7b89e;
+    border-radius: 4px;
+    background-color: #fdf6f0;
+    color: #3e2f2f;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8d6e63;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #5d4037;
+}
+
+.separator {
+    margin: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+.separator hr {
+    border: none;
+    height: 1px;
+    background-color: #d7b89e;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #8d6e63;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive para login */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+    
+    .login-section {
+        margin-top: 100px;
+    }
+}

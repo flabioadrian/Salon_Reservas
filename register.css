@@ -1,0 +1,138 @@
+/* --- VARIABLES DE COLOR (Solo las necesarias para el formulario) --- */
+/* NOTA: Idealmente, si ya incluiste las variables en style.css, podrías omitir este bloque 
+   y depender de que style.css se cargue primero. 
+   Pero si quieres que el archivo de registro sea autocontenido, déjalo. */
+:root {
+    /* Fondos y Contenedores */
+    --color-fondo-contenedor: #fdf6ee; /* Fondo del formulario */
+    
+    /* Texto y Elementos */
+    --color-texto-principal: #333333;
+    --color-etiqueta: #5d4037; 
+    --color-input-borde: #d7b89e; 
+    --color-input-fondo: white; 
+    
+    /* Botón y Enlaces */
+    --color-boton-principal: #8a6c5f; 
+    --color-boton-hover: #7b5f54; 
+    --color-enlace-secundario: #8d6e63; 
+}
+
+
+/* --- 1. SECCIÓN DE REGISTRO (Contenedor principal de la vista) --- */
+.register-section-namedly {
+    /* flex-grow: 1; se usa si el body es display: flex, lo cual se debe mantener en style.css */
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación superior para el contenedor */
+    padding: 40px 20px;
+}
+
+/* --- 2. CONTENEDOR DEL FORMULARIO (La caja blanca) --- */
+.register-form-wrapper {
+    background-color: var(--color-fondo-contenedor); 
+    padding: 40px 60px; 
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0 5px 15px rgba(62, 47, 47, 0.1); 
+    text-align: center;
+    border-radius: 5px;
+}
+
+.register-form-wrapper h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: var(--color-texto-principal);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- ESTILOS DE FORMULARIO (Inputs, Labels, Botón) --- */
+
+.form-group-namedly {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group-namedly label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--color-etiqueta);
+    font-weight: normal;
+}
+
+.form-group-namedly input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-input-borde);
+    border-radius: 4px;
+    background-color: var(--color-input-fondo);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group-namedly input:focus {
+    outline: none;
+    border-color: var(--color-boton-principal); 
+}
+
+/* Campos a la mitad (Filas con dos inputs) */
+.form-row-namedly {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-row-namedly .half {
+    flex: 1;
+}
+
+/* Estilo del botón */
+.submit-btn-namedly {
+    width: 100%;
+    background-color: var(--color-boton-principal);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn-namedly:hover {
+    background-color: var(--color-boton-hover); 
+}
+
+/* Enlace de inicio de sesión */
+.login-link-namedly {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--color-texto-principal);
+}
+
+.login-link-namedly a {
+    color: var(--color-enlace-secundario);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link-namedly a:hover {
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE (SOLO PARA EL FORMULARIO) --- */
+@media (max-width: 768px) {
+    .register-form-wrapper {
+        padding: 30px 20px; /* Reduce el padding en móvil */
+    }
+
+    .form-row-namedly {
+        flex-direction: column; /* Apila los campos que estaban a la mitad */
+        gap: 0;
+    }
+}

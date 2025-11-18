@@ -1,0 +1,218 @@
+/* --- VARIABLES DE COLOR (Basadas en Namedly) --- */
+:root {
+    /* Fondos y Contenedores */
+    --color-fondo-pagina: #fdf6f0; /* Beige suave */
+    --color-fondo-header-footer: #5d4037; /* Marrón oscuro */
+    --color-fondo-contenedor: #fdf6ee; /* Fondo del formulario (si se usa) */
+    
+    /* Texto y Elementos */
+    --color-texto-principal: #3e2f2f; /* Café oscuro */
+    --color-etiqueta: #5d4037;
+    
+    /* Botón y Enlaces */
+    --color-boton-principal: #8d6e63; /* Marrón medio para el botón Registrarse/Iniciar Sesión */
+    --color-boton-hover: #7b5f54; 
+    --color-enlace-secundario: #8d6e63; 
+}
+
+/* --- ESTILOS BASE Y REINICIO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo-pagina); 
+    color: var(--color-texto-principal); 
+    line-height: 1.6;
+    /* Estilos para asegurar que el footer se pegue abajo si es necesario */
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- 1. HEADER (Namedly) --- */
+header {
+    /* Estilo de posicionamiento y sombra */
+    background-color: #f5e6dd; 
+    box-shadow: 0 2px 10px rgba(62, 47, 47, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.namedly-header { 
+    /* Contenedor principal del Header: Flexbox para distribuir elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px; 
+}
+
+/* Logo (Elemento del lado izquierdo) */
+.header-logo a {
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    font-size: 20px; 
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+}
+
+.namedly-icon { 
+    height: 20px; 
+    margin-right: 8px;
+}
+
+/* Navegación (Elemento del lado derecho) */
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--color-boton-principal); 
+}
+
+/* Botón Iniciar Sesión */
+.header-nav .login-btn {
+    background-color: var(--color-boton-principal);
+    color: white;
+    border: 1px solid var(--color-boton-principal);
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.header-nav .login-btn:hover {
+    background-color: var(--color-boton-hover);
+}
+
+
+/* --- SECCIONES DE CONTENIDO GENERAL --- */
+/* NOTA: Estos selectores NO deben estar en un archivo de estilos específico de una página */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 80px 0;
+}
+/* ... Todos los estilos de .hero, .section-title, .about-content, .services, .contact-info, y .btn ... */
+
+
+/* --- 3. FOOTER (Namedly) --- */
+footer {
+    background-color: var(--color-fondo-header-footer); /* Color oscuro */
+    color: #fdf6f0;
+    padding: 60px 0 30px;
+    margin-top: auto; /* Empuja el footer hacia abajo si el contenido es corto */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #8d6e63;
+}
+
+.footer-column p {
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0; /* Asegurar que no tenga padding */
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #f0e6e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d7b89e;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(253, 246, 240, 0.2);
+}
+
+/* --- RESPONSIVE GENERAL --- */
+@media (max-width: 768px) {
+    .namedly-header {
+        padding: 15px 20px;
+    }
+    
+    /* Si tienes un menú hamburguesa, aquí iría su estilo */
+    
+    .hero {
+        height: 50vh;
+    }
+    
+    .carousel-caption {
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr; /* Columna única para el footer en móvil */
+    }
+}
