@@ -34,8 +34,8 @@
                         id="nombres" 
                         name="nombres" 
                         required
-                        pattern="^\S(.*\S)?$"
-                        title="El nombre no puede llevar espacios en blanco al inicio o al final."
+                        pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
+                        title="El nombre solo debe contener letras, espacios, guiones o apóstrofes."
                     >
                 </div>
 
@@ -47,8 +47,8 @@
                             id="apellido_paterno" 
                             name="apellido_paterno" 
                             required
-                            pattern="^\S(.*\S)?$"
-                            title="El apellido paterno no puede llevar espacios en blanco al inicio o al final."
+                            pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
+                            title="El apellido paterno solo debe contener letras, espacios, guiones o apóstrofes."
                         >
                     </div>
                     <div class="form-group-namedly half">
@@ -58,8 +58,8 @@
                             id="apellido_materno" 
                             name="apellido_materno" 
                             required
-                            pattern="^\S(.*\S)?$"
-                            title="El apellido materno no puede llevar espacios en blanco al inicio o al final."
+                            pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
+                            title="El apellido materno solo debe contener letras, espacios, guiones o apóstrofes."
                         >
                     </div>
                 </div>
@@ -72,8 +72,8 @@
                             id="telefono" 
                             name="telefono" 
                             required
-                            pattern="^\S(.*\S)?$"
-                            title="El teléfono no puede llevar espacios en blanco al inicio o al final."
+                            pattern="^\d{10}$"
+                            title="El número de teléfono debe ser de 10 dígitos y solo contener números."
                         >
                     </div>
                     <div class="form-group-namedly half">
@@ -97,7 +97,8 @@
                         name="password" 
                         required
                         minlength="8"
-                        title="La contraseña debe tener al menos 8 caracteres."
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]:;<>,.?~\\/-]).{8,}$"
+                        title="La contraseña debe tener al menos 8 caracteres y contener: una mayúscula, una minúscula, un número y un caracter especial."
                     >
                 </div>
 
