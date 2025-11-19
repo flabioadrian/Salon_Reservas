@@ -1,21 +1,3 @@
-/* --- VARIABLES DE COLOR (Basadas en Namedly) --- */
-:root {
-    /* Fondos y Contenedores */
-    --color-fondo-pagina: #fdf6f0; /* Beige suave */
-    --color-fondo-header-footer: #5d4037; /* Marrón oscuro */
-    --color-fondo-contenedor: #fdf6ee; /* Fondo del formulario (si se usa) */
-    
-    /* Texto y Elementos */
-    --color-texto-principal: #3e2f2f; /* Café oscuro */
-    --color-etiqueta: #5d4037;
-    
-    /* Botón y Enlaces */
-    --color-boton-principal: #8d6e63; /* Marrón medio para el botón Registrarse/Iniciar Sesión */
-    --color-boton-hover: #7b5f54; 
-    --color-enlace-secundario: #8d6e63; 
-}
-
-/* --- ESTILOS BASE Y REINICIO --- */
 * {
     margin: 0;
     padding: 0;
@@ -28,87 +10,101 @@ html {
 }
 
 body {
-    background-color: var(--color-fondo-pagina); 
-    color: var(--color-texto-principal); 
+    background-color: #fdf6f0; 
+    color: #3e2f2f; 
     line-height: 1.6;
-    /* Estilos para asegurar que el footer se pegue abajo si es necesario */
-    display: flex; 
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* --- 1. HEADER (Namedly) --- */
-header {
-    /* Estilo de posicionamiento y sombra */
-    background-color: #f5e6dd; 
-    box-shadow: 0 2px 10px rgba(62, 47, 47, 0.1);
-    position: fixed;
+/* ENCABEZADO GENERAL */
+.header {
     width: 100%;
+    background: #f3e1d6;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
     top: 0;
     z-index: 1000;
 }
 
-.namedly-header { 
-    /* Contenedor principal del Header: Flexbox para distribuir elementos */
+/* LOGO */
+.logo img {
+    height: 75px;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.2));
+}
+
+/* NAVEGACIÓN */
+.nav-bar {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px; 
+    justify-content: center;
 }
 
-/* Logo (Elemento del lado izquierdo) */
-.header-logo a {
-    text-decoration: none;
-    color: var(--color-texto-principal);
-    font-size: 20px; 
-    font-weight: bold;
-    display: flex; 
-    align-items: center;
-}
-
-.namedly-icon { 
-    height: 20px; 
-    margin-right: 8px;
-}
-
-/* Navegación (Elemento del lado derecho) */
-.header-nav {
+.nav-menu {
     display: flex;
-    align-items: center;
+    list-style: none;
+    gap: 45px;
 }
 
-.header-nav a {
+.nav-menu a {
     text-decoration: none;
-    color: var(--color-texto-principal);
-    margin-left: 20px;
-    font-size: 14px;
-    padding: 5px 0;
-    transition: color 0.3s;
+    color: #5d4037;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: 0.3s;
 }
 
-.header-nav a:hover {
-    color: var(--color-boton-principal); 
+.nav-menu a:hover {
+    color: #8a5c39;
 }
 
-/* Botón Iniciar Sesión */
-.header-nav .login-btn {
-    background-color: var(--color-boton-principal);
-    color: white;
-    border: 1px solid var(--color-boton-principal);
-    border-radius: 4px;
-    padding: 8px 15px;
-    font-weight: normal;
-    margin-left: 20px;
+/* BOTÓN DE INICIAR SESIÓN */
+.btn-login {
+    background: #8a5c39;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.header-nav .login-btn:hover {
-    background-color: var(--color-boton-hover);
+.btn-login:hover {
+    background: #5d4037;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
 }
 
 
-/* --- SECCIONES DE CONTENIDO GENERAL --- */
-/* NOTA: Estos selectores NO deben estar en un archivo de estilos específico de una página */
+.menu a {
+    font-size: 20px;       
+    margin-left: 35px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
+/* Hover bonito */
+.menu a:hover {
+    color: #8a5c39;
+    font-weight: 600;
+}
 .container {
     width: 90%;
     max-width: 1200px;
@@ -116,18 +112,241 @@ header {
     padding: 0 15px;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+
+.logo span {
+    color: #a1887f; 
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5d4037;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #8d6e63; 
+}
+
+
+.hero {
+    margin-top: 80px;
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fdf6f0; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(253, 246, 240, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: #f5e6dd;
+}
+
+
 section {
     padding: 80px 0;
 }
-/* ... Todos los estilos de .hero, .section-title, .about-content, .services, .contact-info, y .btn ... */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #5d4037;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #8d6e63;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(62, 47, 47, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
-/* --- 3. FOOTER (Namedly) --- */
+.services {
+    background-color: #f5e6dd;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fdf6f0;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(62, 47, 47, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(62, 47, 47, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #8d6e63;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #5d4037;
+}
+
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #8d6e63;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+    color: #5d4037;
+}
+
+
 footer {
-    background-color: var(--color-fondo-header-footer); /* Color oscuro */
+    background-color: #5d4037;
     color: #fdf6f0;
     padding: 60px 0 30px;
-    margin-top: auto; /* Empuja el footer hacia abajo si el contenido es corto */
 }
 
 .footer-content {
@@ -160,7 +379,6 @@ footer {
 
 .footer-links {
     list-style: none;
-    padding: 0; /* Asegurar que no tenga padding */
 }
 
 .footer-links li {
@@ -183,13 +401,29 @@ footer {
     border-top: 1px solid rgba(253, 246, 240, 0.2);
 }
 
-/* --- RESPONSIVE GENERAL --- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #5d4037;
+}
+
+
 @media (max-width: 768px) {
-    .namedly-header {
-        padding: 15px 20px;
+    .nav-menu {
+        display: none;
     }
-    
-    /* Si tienes un menú hamburguesa, aquí iría su estilo */
     
     .hero {
         height: 50vh;
@@ -210,9 +444,5 @@ footer {
     
     section {
         padding: 60px 0;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr; /* Columna única para el footer en móvil */
     }
 }
