@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,119 +8,83 @@
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="namedly-header">
+    <header class="header">
         <div class="header-logo">
-            <a href="inicio.html" class="logo">
-                <img src="Img/Logo.png" alt="Logo" class="namedly-icon"> Salon Tenex
+            <a href="index.html" class="logo">
+                <img src="Img/Logo.png" alt="Logo" class="namedly-icon">
             </a>
         </div>
-        <nav class="header-nav">
-            <a href="salas.html">Ver salas</a>
-            <a href="registro.html">Registrarse</a>
-            <a href="login.html" class="login-btn">Iniciar sesión</a>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <a href="salas.html">Ver salas</a>
+                <a href="registro.html">Registrarse</a>
+                <a href="login.html" class="login-btn">Iniciar sesión</a>
+            </ul>
         </nav>
     </header>
 
     <section class="register-section-namedly">
         <div class="register-form-wrapper">
             <h2>Registrarse</h2>
-            
+
             <form id="registroForm" action="procesar_registro.php" method="POST">
-                
+
                 <div class="form-group-namedly">
                     <label for="nombres">Nombre(s):</label>
-                    <input 
-                        type="text" 
-                        id="nombres" 
-                        name="nombres" 
-                        required
-                        pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
-                        title="El nombre solo debe contener letras, espacios, guiones o apóstrofes."
-                    >
+                    <input type="text" id="nombres" name="nombres" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
+                        title="El nombre solo debe contener letras, espacios, guiones o apóstrofes.">
                 </div>
 
                 <div class="form-row-namedly">
                     <div class="form-group-namedly half">
                         <label for="apellido_paterno">Apellido paterno:</label>
-                        <input 
-                            type="text" 
-                            id="apellido_paterno" 
-                            name="apellido_paterno" 
-                            required
+                        <input type="text" id="apellido_paterno" name="apellido_paterno" required
                             pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
-                            title="El apellido paterno solo debe contener letras, espacios, guiones o apóstrofes."
-                        >
+                            title="El apellido paterno solo debe contener letras, espacios, guiones o apóstrofes.">
                     </div>
                     <div class="form-group-namedly half">
                         <label for="apellido_materno">Apellido materno:</label>
-                        <input 
-                            type="text" 
-                            id="apellido_materno" 
-                            name="apellido_materno" 
-                            required
+                        <input type="text" id="apellido_materno" name="apellido_materno" required
                             pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]+$"
-                            title="El apellido materno solo debe contener letras, espacios, guiones o apóstrofes."
-                        >
+                            title="El apellido materno solo debe contener letras, espacios, guiones o apóstrofes.">
                     </div>
                 </div>
 
                 <div class="form-row-namedly">
                     <div class="form-group-namedly half">
                         <label for="telefono">Número de teléfono:</label>
-                        <input 
-                            type="tel" 
-                            id="telefono" 
-                            name="telefono" 
-                            required
-                            pattern="^\d{10}$"
-                            title="El número de teléfono debe ser de 10 dígitos y solo contener números."
-                        >
+                        <input type="tel" id="telefono" name="telefono" required pattern="^\d{10}$"
+                            title="El número de teléfono debe ser de 10 dígitos y solo contener números.">
                     </div>
                     <div class="form-group-namedly half">
                         <label for="email">Correo electrónico:</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            required 
-                            pattern="^\S+@\S+\.\S+$"
-                            title="Introduce un correo electrónico válido sin espacios al inicio o al final."
-                        >
+                        <input type="email" id="email" name="email" required pattern="^\S+@\S+\.\S+$"
+                            title="Introduce un correo electrónico válido sin espacios al inicio o al final.">
                     </div>
                 </div>
 
                 <div class="form-group-namedly">
                     <label for="password">Contraseña:</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        required
-                        minlength="8"
+                    <input type="password" id="password" name="password" required minlength="8"
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]:;<>,.?~\\/-]).{8,}$"
-                        title="La contraseña debe tener al menos 8 caracteres y contener: una mayúscula, una minúscula, un número y un caracter especial."
-                    >
+                        title="La contraseña debe tener al menos 8 caracteres y contener: una mayúscula, una minúscula, un número y un caracter especial.">
                 </div>
 
                 <div class="form-group-namedly">
                     <label for="direccion">Dirección(opcional):</label>
-                    <input 
-                        type="text" 
-                        id="direccion" 
-                        name="direccion"
-                        pattern="^\S(.*\S)?$"
-                        title="La dirección no puede llevar espacios en blanco al inicio o al final."
-                    >
+                    <input type="text" id="direccion" name="direccion" pattern="^\S(.*\S)?$"
+                        title="La dirección no puede llevar espacios en blanco al inicio o al final.">
                 </div>
-                
+
                 <button type="submit" class="submit-btn-namedly">Registrarse</button>
             </form>
-            
+
             <p class="login-link-namedly">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
         </div>
     </section>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -131,17 +96,18 @@
                         <li><a href="faq.html">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Contacto</h3>
                     <p>Teléfono: +52 5574041696</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2023 MiSitio. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
