@@ -1,20 +1,11 @@
 <?php
 // procesar_login.php
-
-
 session_start();
-
-
 require 'conexion.php'; 
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
     $email = trim($_POST['email']);
     $password = $_POST['password']; 
-
-
 
     if (empty($email) || empty($password))
          {
@@ -23,9 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-
         $sql = "SELECT id_cliente, nombre, password  FROM cliente WHERE email = ?";
-        
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -57,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: login.html?error=credenciales_invalidas");
             exit();
         }
-
         $stmt->close();
         $conn->close();
 
