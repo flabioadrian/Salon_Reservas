@@ -80,7 +80,7 @@
 </div>
 <section class="dashboard-menu">
         <div class="dashboard-card">
-            <button class="btn card-btn">Mi Perfil</button>
+            <a href="perfil.php" class="btn card-btn"> Mi Perfil </a>
             <div class="card-icon">
                 <i data-feather="user"></i>
             </div>
@@ -154,7 +154,7 @@
             
             if (data.success) {
                 // 2. Si es exitoso, muestra el nombre (ej: "Hola, bienvenido Juan")
-                saludoElement.textContent = 'Hola, bienvenido ' + data.nombre;
+                saludoElement.textContent = 'Hola, bienvenid@ ' + data.nombre;
             } else {
                 // 3. SI NO HAY SESIÓN (ERROR), REDIRIGE AL LOGIN
                 window.location.href = 'login.html?session_expired';
@@ -163,7 +163,7 @@
         .catch(error => {
             // Maneja errores de conexión (si el archivo PHP no existe)
             console.error('Error al obtener la sesión:', error);
-            document.getElementById('saludo-personalizado').textContent = 'Hola, bienvenido Invitado';
+            document.getElementById('saludo-personalizado').textContent = 'Hola, bienvenid@ Invitado';
         });
     });
     </script>
