@@ -93,7 +93,7 @@ try {
             
             <div class="perfil-actions">
                 <a href="NewContra.html" class="btn perfil-btn">Cambiar Contraseña</a> 
-                
+                <a href="cambios.html" class="btn perfil-btn">Editar Perfil</a>
                 <a href="inicio.html" class="btn perfil-btn">Salir</a>
             </div>
 
