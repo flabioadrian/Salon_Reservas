@@ -2,7 +2,7 @@
 // procesar_registro.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recoger y limpiar los datos del formulario
-    $nombres = trim($_POST['nombres']);
+    $nombres = trim($_POST['nombre']);
     $apellido_paterno = trim($_POST['apellido_paterno']);
     $apellido_materno = trim($_POST['apellido_materno']);
     $telefono = trim($_POST['telefono']);

@@ -286,17 +286,6 @@ footer {
 .reserva-fecha-col {
     min-width: 300px;
 }
-.calendario-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    border: 1px solid #8d6e63;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
 
 .calendario-placeholder svg {
     width: 50px;

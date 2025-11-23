@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,7 +29,7 @@
             </ul>
         </nav>
 
-        <a href="login.html" class="btn-login">Cerrar Sesión</a> 
+        <a href="index.html" class="btn-login">Cerrar Sesión</a>
     </header>
 
     <section id="inicio" class="hero">
@@ -73,7 +75,7 @@
 
 <div class="welcome-banner">
     <div class="container">
-        <p id="welcome-message">Hola, bienvenido [Nombre del Usuario]</p> 
+        <h1 id="saludo-personalizado">Cargando...</h1>
     </div>
 </div>
 <section class="dashboard-menu">
@@ -140,6 +142,31 @@
     </script>
 
     <script src="script.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+    fetch('obtener_nombre.php')
+        .then(response => response.json())
+        .then(data => {
+            const saludoElement = document.getElementById('saludo-personalizado');
+            
+            if (data.success) {
+                // 2. Si es exitoso, muestra el nombre (ej: "Hola, bienvenido Juan")
+                saludoElement.textContent = 'Hola, bienvenido ' + data.nombre;
+            } else {
+                // 3. SI NO HAY SESIÓN (ERROR), REDIRIGE AL LOGIN
+                window.location.href = 'login.html?session_expired';
+            }
+        })
+        .catch(error => {
+            // Maneja errores de conexión (si el archivo PHP no existe)
+            console.error('Error al obtener la sesión:', error);
+            document.getElementById('saludo-personalizado').textContent = 'Hola, bienvenido Invitado';
+        });
+    });
+    </script>
 </body>
 
 </html>
