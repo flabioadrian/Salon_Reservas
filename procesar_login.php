@@ -43,10 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // 7. CREAR VARIABLES DE SESIÓN: Guardar datos del usuario
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['id_cliente'] = $usuario['id_cliente'];
-                $_SESSION['nombre'] = $usuario['nombre']; // Guardamos el nombre para el saludo
-                
-                // 8. REDIRIGIR AL INICIO DEL CLIENTE
-                // Basado en tu estructura de archivos (image_c2d7fc.png), redirigiremos a index.html
+                $_SESSION['nombre_usuario'] = $usuario['nombre'];
                 header("Location: index.html"); 
                 exit();
 
