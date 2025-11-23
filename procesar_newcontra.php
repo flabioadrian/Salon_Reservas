@@ -18,11 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_nueva = $_POST['password_nueva'];
     $password_confirmar = $_POST['password_confirmar'];
     
+    // Validación 1: Coincidencia
     if ($password_nueva !== $password_confirmar) {
         header("Location: NewContra.php?error=no_coinciden");
         exit();
     }
-  
+    
+    // Validación 2: Longitud
     if (strlen($password_nueva) < 6) {
         header("Location: NewContra.php?error=corta");
         exit();
@@ -57,12 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // 'si' por string (hash) e integer (id)
             $stmt_update->bind_param("si", $nuevo_hash, $id_cliente);
-            if ($stmt_update->execute()) {
-           
-                header("Location: NewContra.php?status=success"); 
-            } else {
             
-            else {
+            // Ejecutar y manejar el resultado de la actualización
+            if ($stmt_update->execute()) {
+                // ÉXITO
+                header("Location: NewContra.php?status=success"); 
+            } else 
+            {
                 // Error de la base de datos
                 header("Location: NewContra.php?error=db_fail");
             }
@@ -80,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-
+    // Si se accede directamente
     header("Location: perfil.php");
     exit();
 }

@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $stmt = $conn->prepare($sql);
         
-        // Enlazar parámetros: 5 strings (s) y 1 integer (i)
+
         $stmt->bind_param("sssssi", 
             $nombre, 
             $apellido_paterno, 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($stmt->execute()) {
             // Éxito: Redirige de vuelta a Cambios.php con mensaje de éxito
-            header("Location: Cambios.php?status=success");
+            header("Location: perfil.php?status=success");
         } else {
             // Error en la ejecución de la consulta
             header("Location: Cambios.php?status=error&msg=db_fail");
