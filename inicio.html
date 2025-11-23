@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenex Reservas - Inicio</title>
+    <link rel="stylesheet" href="inicio.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#inicio" class="logo">
+                <img src="Img/Logo.png" alt="Logo" class="namedly-icon">
+            </a>
+        </div>
+
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#registrar">Reservar</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="login.html" class="btn-login">Cerrar Sesión</a> 
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/Salon de fiestas2.jpg" alt="Salas de reunión">
+                    <div class="carousel-caption">
+                        <h2>Salas de reunión Tenex</h2>
+                        <p>Encuentra el espacio ideal para tus reuniones y proyectos.</p>
+                        <a href="#registrar" class="btn">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Img/Salón de fiestas.jpeg" alt="Sala de conferencias">
+                    <div class="carousel-caption">
+                        <h2>Equipamiento completo</h2>
+                        <p>Nuestras salas cuentan con servicios extra para brindar una mejor presentacion y buena
+                            calidad.</p>
+                        <a href="#servicios" class="btn">Ver servicios</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Img/Salon de fiestas3.jpg" alt="Ambiente inspirador">
+                    <div class="carousel-caption">
+                        <h2>Ambientes inspiradores</h2>
+                        <p>Diseñados para potenciar la creatividad y productividad de tu equipo.</p>
+                        <a href="#nosotros" class="btn">Conoce más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-slide="0"></span>
+                    <span class="carousel-indicator" data-slide="1"></span>
+                    <span class="carousel-indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+</section>
+
+<div class="welcome-banner">
+    <div class="container">
+        <p id="welcome-message">Hola, bienvenido [Nombre del Usuario]</p> 
+    </div>
+</div>
+<section class="dashboard-menu">
+        <div class="dashboard-card">
+            <button class="btn card-btn">Mi Perfil</button>
+            <div class="card-icon">
+                <i data-feather="user"></i>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <button class="btn card-btn">Salas</button>
+            <div class="card-icon">
+                <i data-feather="home"></i>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <button class="btn card-btn">Mis Reservas</button>
+            <div class="card-icon">
+                <i data-feather="archive"></i>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tenex Reservas</h3>
+                    <p>Salas de reunión excepcionales para tus proyectos y eventos. Inspiramos creatividad y
+                        productividad en cada espacio.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#registrar">Reservar</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Políticas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cancelación</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tenex Reservas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

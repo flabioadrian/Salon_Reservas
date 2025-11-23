@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas Disponibles</title>
+    <link rel="stylesheet" href="detalles.css"> 
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+            <a href="#inicio" class="logo">
+                <img src="Img/Logo.png" alt="Logo" class="namedly-icon">
+            </a>
+        </div>
+</header>
+
+<section class="perfil-section">
+    <h2 class="perfil-title">DETALLES DE MI RESERVA</h2>
+        
+    <div class="detalles-reserva-form">
+        <div class="detalles-info-col">
+            <label for="nombreSalaDetalles">Nombre De La Sala</label>
+            <div class="detalles-img-placeholder">
+                <i data-feather="image"></i>
+            </div>
+            
+            <label for="precioTotalDetalles">Precio Total:</label>
+            <input type="text" id="precioTotalDetalles" name="precioTotalDetalles" value="$XXX.XX" readonly>
+            
+            <label for="capacidadDetalles">Capacidad:</label>
+            <input type="text" id="capacidadDetalles" name="capacidadDetalles" value="0 personas" readonly>
+        </div>
+
+        <div class="detalles-fecha-col">
+            <label for="calendarioDetalles">Calendario</label>
+            <div class="calendario-placeholder">
+                <i data-feather="calendar"></i>
+            </div>
+            
+            <label for="horaInicioDetalles">Hora Inicio:</label>
+            <input type="text" id="horaInicioDetalles" name="horaInicioDetalles" value="00:00" readonly>
+            
+            <label for="horaFinDetalles">Hora Fin:</label>
+            <input type="text" id="horaFinDetalles" name="horaFinDetalles" value="00:00" readonly>
+            
+            <label for="servicioIncluidoDetalles">Servicio Incluido:</label>
+            <input type="text" id="servicioIncluidoDetalles" name="servicioIncluidoDetalles" value="Sí/No" readonly>
+        </div>
+
+        <div class="detalles-acciones-col">
+            <label for="formaPagoDetalles">Forma De Pago: **PayPal**</label>
+            
+            <label for="estadoReserva">Estado:</label>
+            <input type="text" id="estadoReserva" name="estadoReserva" value="Confirmada" readonly>
+            
+            <div class="detalles-botones">
+                <button class="btn regresar-btn">Regresar</button>
+                <button class="btn cancelar-reserva-btn-detalles">Cancelar Reserva</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    feather.replace();
+</script>
+
+    </section>
+
+<footer>
+    <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tenex Reservas</h3>
+                    <p>Salas de reunión excepcionales para tus proyectos y eventos. Inspiramos creatividad y productividad en cada espacio.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#registrar">Reservar</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Políticas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cancelación</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tenex Reservas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+</footer>
+
+<script>
+    feather.replace();
+</script>
+
+</body>
+</html>

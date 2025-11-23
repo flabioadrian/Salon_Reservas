@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fdf6f0; 
+    color: #3e2f2f; 
+    line-height: 1.6;
+}
+
+.header {
+    width: 100%;
+    background: #f3e1d6;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 75px;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.2));
+}
+.nav-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5d4037;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #8a5c39;
+}
+
+.btn-login {
+    background: #8a5c39;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #5d4037;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero {
+    margin-top: 80px;
+    position: relative;
+    height: 70vh; 
+    overflow: hidden;
+    margin-bottom: 0px; 
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fdf6f0; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(253, 246, 240, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: #f5e6dd;
+}
+
+.dashboard-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    width: 100%;
+    
+    /* ¡CAMBIOS CLAVE! Posicionamiento normal y eliminación de márgenes trucados */
+    position: static; /* Asegura que está en el flujo normal */
+    transform: none;
+    
+    /* Agregamos padding o margin para separarlo visualmente del banner de bienvenida */
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+.card-btn {
+    background: #8a5c39; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background: #5d4037;
+}
+
+.dashboard-card .card-icon {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+    height: 100px; 
+    background-color: white; 
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #f3e1d6;
+}
+
+.dashboard-card .card-icon i {
+    width: 50px; 
+    height: 50px; 
+    color: #5d4037; 
+    stroke-width: 2;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #5d4037;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #8d6e63;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #5d4037;
+}
+
+footer {
+    background-color: #5d4037;
+    color: #fdf6f0;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #8d6e63;
+}
+
+.footer-column p {
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #f0e6e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d7b89e;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(253, 246, 240, 0.2);
+}
+
+.welcome-banner {
+    /* Color de fondo claro, similar a tu body o header */
+    background-color: #f3e1d6; 
+    padding: 15px 0; /* Un poco de relleno arriba y abajo */
+    text-align: center;
+    /* Un pequeño margen para separarlo del carrusel, si es necesario */
+    margin-top: 0; 
+}
+
+.welcome-banner .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#welcome-message {
+    font-size: 1.2rem;
+    font-weight: 700; /* Lo hacemos más notorio */
+    color: #5d4037; /* Color marrón oscuro de tu diseño */
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+    
+    .hero {
+        height: auto; 
+        padding-bottom: 20px;
+        margin-bottom: 150px; 
+    }
+    
+    .carousel-caption {
+        position: static; 
+        color: #3e2f2f;
+        text-shadow: none;
+        padding: 20px 0;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+    
+    .carousel-caption {
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .dashboard-menu {
+        display: flex;
+        justify-content: center;
+        gap: 300px; 
+        width: 100%;
+        position: absolute; 
+        bottom: -200px; 
+        left: 50%;
+        transform: translateX(-50%); 
+        z-index: 500;
+    }
+
+    .dashboard-card {
+        width: 100%; 
+        align-items: center; 
+         gap: 300px; 
+        flex-direction: row-reverse; 
+        justify-content: center;
+    }
+
+    .card-btn {
+        width: 60%; 
+
+        order: 1; 
+    }
+    
+    .dashboard-card .card-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .dashboard-card .card-icon i {
+        width: 35px;
+        height: 35px;
+    }
+}
