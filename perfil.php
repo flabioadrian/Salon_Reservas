@@ -92,8 +92,8 @@ try {
             </div>
             
             <div class="perfil-actions">
-                <a href="NewContra.html" class="btn perfil-btn">Cambiar Contraseña</a> 
-                <a href="cambios.html" class="btn perfil-btn">Editar Perfil</a>
+                <a href="NewContra.php" class="btn perfil-btn">Cambiar Contraseña</a> 
+                <a href="cambios.php" class="btn perfil-btn">Editar Perfil</a>
                 <a href="inicio.html" class="btn perfil-btn">Salir</a>
             </div>
 

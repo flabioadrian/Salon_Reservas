@@ -66,7 +66,7 @@ else if (isset($_GET['error']) && $_GET['error'] == 'actual_incorrecta') {
                     <input type="password" id="password_confirmar" name="password_confirmar" required>
                 </div>
                 
-                <button type="submit" class="btn guardar-btn">Guardar Cambios</button>
+                <button type="submit" class="btn guardar-btn">Guardar Cambios</b>
                 
                 <a href="perfil.php" class="btn guardar-btn">Descartar Cambios</a>
             </div>
