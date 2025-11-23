@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Ejecutar y manejar el resultado de la actualización
             if ($stmt_update->execute()) {
                 // ÉXITO
-                header("Location: NewContra.php?status=success"); 
+                header("Location: perfil.php?status=success"); 
             } else 
             {
                 // Error de la base de datos

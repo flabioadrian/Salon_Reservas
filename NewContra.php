@@ -70,7 +70,7 @@ else if (isset($_GET['error']) && $_GET['error'] == 'actual_incorrecta') {
                 <button type="submit" class="btn guardar-btn">Guardar Cambios</button>
     
                 <a href="perfil.php" class="btn guardar-btn">Descartar Cambios</a>
-                </div>
+            </div>
             </div>
             
         </form>

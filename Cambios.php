@@ -98,10 +98,11 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 
             <div class="perfil-actions">
                 <button type="submit" class="btn perfil-btn">Guardar Cambios</button>
+                <a href="perfil.php" class="btn perfil-btn">Descartar</a>
             </div>
 
         </form>
-                <a href="perfil.php" class="btn perfil-btn">Descartar Cambios</a>
+                
     </section>
     
     <footer>
