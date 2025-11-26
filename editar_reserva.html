@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Reserva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-logo">
+                <img src="Img/Logo.png" alt="Logo del Sistema">
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">A</div>
+                <span>Administrador</span>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                
+                <li class="menu-item">
+                    <a href="#">Salas</a>
+                    <ul class="submenu">
+                        <li><a href="crear_sala.html">Crear sala</a></li>
+                        <li><a href="editar_sala.html">Editar sala</a></li>
+                        <li><a href="equipamiento.html">Equipamiento</a></li>
+                    </ul>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="#">Reservas</a>
+                    <ul class="submenu">
+                        <li><a href="ver_reservas.html">Ver reservas</a></li>
+                        <li><a href="editar_reserva.html" class="active">Editar reservas</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="ver_usuarios.html">Usuarios</a></li>
+                <li><a href="ver_reportes.html">Reportes</a></li>
+                <li><a href="#" class="logout">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <div class="content">
+            <h1 class="page-title">Editor reservas</h1>
+            
+            <div class="card">
+                <form action="php/reservas.php" method="POST">
+                    <input type="hidden" name="accion" value="editar">
+                    <input type="hidden" name="id_reserva" value="1">
+                    
+                    <div class="form-group">
+                        <label for="nombre_sala">Nombre De La Sala</label>
+                        <select id="nombre_sala" name="nombre_sala" class="form-control" required>
+                            <option value="conferencia_a" selected>Conferencia A</option>
+                            <option value="conferencia_b">Conferencia B</option>
+                            <option value="reuniones_a">Reuniones A</option>
+                            <option value="reuniones_b">Reuniones B</option>
+                            <option value="auditorio">Auditorio</option>
+                            <option value="sala_juntas">Sala de Juntas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="calendario">Calendario</label>
+                        <input type="date" id="calendario" name="fecha" class="form-control" value="2023-10-15" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" class="form-control" step="0.01" value="150.00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="capacidad">Capacidad:</label>
+                        <input type="number" id="capacidad" name="capacidad" class="form-control" value="50" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora_inicio">Hora Inicio:</label>
+                        <input type="time" id="hora_inicio" name="hora_inicio" class="form-control" value="09:00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora_fin">Hora Fin:</label>
+                        <input type="time" id="hora_fin" name="hora_fin" class="form-control" value="11:00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Servicio Adicional:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="proyector_res" name="servicio_adicional[]" value="proyector" checked>
+                                <label for="proyector_res">Proyector</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="wifi_res" name="servicio_adicional[]" value="wifi" checked>
+                                <label for="wifi_res">Wi-Fi</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cafeteria_res" name="servicio_adicional[]" value="cafeteria">
+                                <label for="cafeteria_res">Servicio de Cafetería</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        <button type="button" class="btn btn-warning" onclick="window.history.back()">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Eliminar reserva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>Tenex Reservas</h3>
+                            <p>Salas de reunión excepcionales para tus proyectos y eventos. Inspiramos creatividad y
+                                productividad en cada espacio.</p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Enlaces Rápidos</h3>
+                            <ul class="footer-links">
+                                <li><a href="#inicio">Inicio</a></li>
+                                <li><a href="#registrar">Reservar</a></li>
+                                <li><a href="#nosotros">Nosotros</a></li>
+                                <li><a href="#servicios">Servicios</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Políticas</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Términos y Condiciones</a></li>
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Política de Cancelación</a></li>
+                                <li><a href="#">Política de Cookies</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Tenex Reservas. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

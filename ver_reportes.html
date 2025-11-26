@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Reportes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-logo">
+                <img src="Img/Logo.png" alt="Logo del Sistema">
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">A</div>
+                <span>Administrador</span>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                
+                <li class="menu-item">
+                    <a href="#">Salas</a>
+                    <ul class="submenu">
+                        <li><a href="crear_sala.html">Crear sala</a></li>
+                        <li><a href="editar_sala.html">Editar sala</a></li>
+                        <li><a href="equipamiento.html">Equipamiento</a></li>
+                    </ul>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="#">Reservas</a>
+                    <ul class="submenu">
+                        <li><a href="ver_reservas.html">Ver reservas</a></li>
+                        <li><a href="editar_reserva.html">Editar reservas</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="ver_usuarios.html">Usuarios</a></li>
+                <li><a href="ver_reportes.html" class="active">Reportes</a></li>
+                <li><a href="#" class="logout">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <div class="content">
+            <h1 class="page-title">Ver reportes</h1>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Reporte de Reservas</h3>
+                    <div>
+                        <label for="filtro_fecha">Filtrar por fecha:</label>
+                        <input type="month" id="filtro_fecha" class="form-control" style="display: inline-block; width: auto;">
+                        
+                       
+                    </div>
+                </div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Reserva</th>
+                            <th>Fecha</th>
+                            <th>Sala</th>
+                            <th>Hora inicio</th>
+                            <th>Hora fin</th>
+                            <th>Usuario</th>
+                            <th>Costo</th>
+                            <th>Servicio adicional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reserva 1</td>
+                            <td>15/10/2023</td>
+                            <td>Conferencia A</td>
+                            <td>09:00 AM</td>
+                            <td>11:00 AM</td>
+                            <td>Luis Angel</td>
+                            <td>$150.00</td>
+                            <td>Proyector, Wi-Fi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>Tenex Reservas</h3>
+                            <p>Salas de reunión excepcionales para tus proyectos y eventos. Inspiramos creatividad y
+                                productividad en cada espacio.</p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Enlaces Rápidos</h3>
+                            <ul class="footer-links">
+                                <li><a href="#inicio">Inicio</a></li>
+                                <li><a href="#registrar">Reservar</a></li>
+                                <li><a href="#nosotros">Nosotros</a></li>
+                                <li><a href="#servicios">Servicios</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Políticas</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Términos y Condiciones</a></li>
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Política de Cancelación</a></li>
+                                <li><a href="#">Política de Cookies</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Tenex Reservas. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
